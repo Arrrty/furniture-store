@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+  border: none;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 400;
+  color: #616161;
+}
+
+header {
+  color: white;
+  padding: 25px 0; 
+  position: relative;
+}
+
+header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/vitrina1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(35%);
+  z-index: -10;
+}
+
+a {
+  text-decoration: none;
+  color: #f7b70b;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background-color: #f7b70b;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c79200;
+}
+
+.fix-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+/**
+\========== HEADER =========/
+*/
+.heading-text {
+  font-size: 4vw;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading-separator {
+  display: inline-block;
+  width: 90%;
+  height: 2px;
+  background-color: #f7b70b;
+  margin-bottom: 10px;
+}
+
+.heading-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading-icons_item {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-left: 8vw;
+  font-size: 3vw;
+}
+
+.heading-icons_item:last-child {
+  margin-bottom: 0;
+}
+
+.heading-icons_item::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 3vw);
+  left: 0;
+  width: 6vw;
+  height: 6vw;
+  background-image: url(./img/icons8-город-100.png);
+  background-size: cover;
+}
+
+.heading-btn {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+/**
+/========== PROJECTS =========/
+*/
+
+.block {
+  width: 100%;
+}
+
+.block-title {
+  width: 100%;
+  background-color: #e5e1de;
+  padding: 50px 0 20px;
+}
+
+.block-title h2 {
+  text-transform: uppercase;
+}
+
+.block-content {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: 100%;
+  margin: 0 auto 20px;
+}
+
+.project figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.project figure:hover:before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  top: 20px;
+  left: 20px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.373);
+  z-index: 1;
+}
+
+.project figure img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  filter: brightness(90%);
+  object-fit: cover;
+}
+
+.project figure figcaption {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.project figure:hover figcaption {
+  opacity: 1;
+}
+
+.project figure:hover img {
+  filter: brightness(50%);
+  transform: scale(1.2);
+}
+
+/* 
+\============= equipment ============/
+*/
+
+.equipment {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.equipment img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equipment a {
+  width: 100%;
+  max-width: 510px;
+  height: 50vw;
+  max-height: 320px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.442);
+}
+
+.equipment img:hover {
+  filter: brightness(70%);
+  transform: scale(1.2);
+}
+
+.equipment p {
+  line-height: 300%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* 
+\ ========== AD ===========/
+*/
+
+.ad-heading {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.ad-heading span {
+  color: #d29a00;
+}
+
+.ad-text {
+  margin-bottom: 20px;
+}
+
+.ad-btn {
+ margin: 0 auto;
+}
+
+/* 
+\=========== FOOTER ==========/
+ */
+
+.feedback-container {
+  background-color: white;
+}
+
+.networks-container {
+  background-color: #e5e1de;
+}
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.feedback li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #f7b70b;
+}
+
+.feedback li:last-child {
+  border: none;
+}
+
+.feedback li span {
+  position: relative;
+  text-align: center;
+  padding-top: calc(8vw + 10px);
+}
+
+.feedback-call span::before {
+  background-image: url(./img/icon/phone.png);
+}
+
+.feedback-mail span::before {
+  background-image: url(./img/icon/email.png);
+}
+
+.feedback-addres span::before {
+  background-image: url(./img/icon/addres.png);
+}
+
+.feedback span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(50% - 4vw);;
+  width: 8vw;
+  height: 8vw;
+  background-size: cover;
+}
+
+.feedback a {
+  padding: 3px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.feedback a:hover {
+  border-bottom: 1px solid #f7b70b;
+}
+
+.networks {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.networks li svg {
+  width: 8vw;
+  height: 8vw;
+}
+
+.networks li svg path:hover {
+  stroke: #c79200;
+}
+
+@media all and (min-width: 620px) {
+
+  header {
+    padding: 100px 0;
+  }
+
+  .fix-container {
+    padding: 0 20px;
+  }
+    
+  /**
+  \========== HEADER =========/
+  */
+
+  .heading-text {
+    font-size: 3vw;
+    margin-bottom: 40px;
+  }
+  
+  .heading-icons {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .heading-icons_item {
+    padding-left: 6vw;
+    margin: 0 20px 20px 0;
+    font-size: 2vw;
+  }
+
+  .heading-icons_item:last-child {
+    margin-bottom: 20px;
+  }
+  
+  .heading-icons_item::before {
+    top: calc(50% - 2vw);
+    width: 4vw;
+    height: 4vw;
+  }
+  
+  /**
+  /========== PROJECTS =========/
+  */
+  
+  .block-title {
+    padding: 60px 0 30px;
+  }
+  
+  .block-title h2 {
+    font-size: 30px;
+  }
+  
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .projects > .project {
+    width: 100%;
+  }
+
+  .project-container {
+    display: flex;
+  }
+
+  .project-container :first-child {
+    margin-right: 20px;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+
+  .projects > .project:first-child figure figcaption {
+    font-size: 30px;
+  }
+  
+  .project figure figcaption {
+    letter-spacing: 3px;
+  }
+
+  /* 
+  \=========== FOOTER ==========/
+   */
+  
+  .feedback {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+  }
+  
+  .feedback li {
+    width: 28%;
+    flex-grow: 1;
+    border-bottom: none;
+    padding: 30px 10px;
+    text-align: center;
+    border-right: 1px solid #f7b70b;
+  }
+  
+  .feedback li:last-child {
+    border: none;
+  }
+  
+  .feedback li span {
+    padding-top: calc(6vw + 10px);
+  }
+  
+  .feedback span::before {
+    left: calc(50% - 3vw);;
+    width: 6vw;
+    height: 6vw;
+  }
+  
+  
+  .networks li svg {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+@media all and (min-width: 860px) {
+
+   /**
+  /========== PROJECTS =========/
+  */
+  
+  .block-title h2 {
+    font-size: 35px;
+  }
+  
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project {
+    margin: 0;
+  }
+
+  .projects > .project {
+    width: 55%;
+    flex-grow: 0;
+    margin-right: 20px;
+    
+  }
+
+  .project-container {
+    width: 30%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .project-container > .project {
+    margin: 0;
+    max-height: 300px;
+  }
+
+  .project-container > .project:first-child {
+    margin-bottom: 20px;
+  }
+
+/* 
+  \============= equipment ============/
+  */
+  
+  .equipments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .equipment {
+    width: 40%;
+  }
+
+  .equipment a {
+    height: 25vw;
+  }
+  
+  .equipment p {
+   font-size: 1.2em;
+  }
+  
+  /* 
+  \ ========== AD ===========/
+  */
+  
+  .ad-text {
+    font-size: 20px;
+  }
+
+  .networks {
+    justify-content: center;
+  }
+
+  .networks li {
+    margin: 0 30px;
+  }
+
+  .networks li svg {
+    width: 4vw;
+    height: 4vw;
+  }
+
+}
+
+@media all and (min-width: 1000px) {
+
+  .heading-text {
+    font-size: 2.5vw;
+  }
+
+  .fix-container {
+    padding: 0;
+  }
+}
