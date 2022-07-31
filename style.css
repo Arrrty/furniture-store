@@ -15,7 +15,7 @@ body {
 
 header {
   color: white;
-  padding: 25px 0; 
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -36,6 +36,12 @@ header::before{
 a {
   text-decoration: none;
   color: #f7b70b;
+  padding: 3px 0;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid #f7b70b;
 }
 
 li {
@@ -46,6 +52,7 @@ button {
   width: 200px;
   height: 50px;
   background-color: #f7b70b;
+  /* color: #f76a0b76; */
   font-size: 1.25rem;
   color: white;
   font-weight: bold;
@@ -65,8 +72,62 @@ button:hover {
 }
 
 /**
+\========== FORM =========/
+*/
+
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  visibility: hidden;
+}
+
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 60vw;
+  background: rgba(255, 255, 255, 0.814);
+  border-radius: 5px;
+}
+
+.form-container form input {
+  padding: 5px 15px;
+  border: 1px solid #c79200;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.form-container form input:last-child {
+  margin: 0 auto;
+  width: 200px;
+  background-color: #f7b70b;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/**
 \========== HEADER =========/
 */
+
+.heading-contacts {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .heading-text {
   font-size: 4vw;
   text-align: center;
@@ -91,9 +152,9 @@ button:hover {
 .heading-icons_item {
   position: relative;
   text-align: center;
-  margin-bottom: 30px;
-  padding-left: 8vw;
+  padding-left: 7vw;
   font-size: 3vw;
+  line-height: 50px;
 }
 
 .heading-icons_item:last-child {
@@ -107,8 +168,19 @@ button:hover {
   left: 0;
   width: 6vw;
   height: 6vw;
-  background-image: url(./img/icons8-город-100.png);
   background-size: cover;
+}
+
+.heading-icons :nth-child(1):before {
+  background-image: url(./img/icon/city.png);
+}
+
+.heading-icons :nth-child(2):before {
+  background-image: url(./img/icon/guarantee.png);
+}
+
+.heading-icons :nth-child(3):before {
+  background-image: url(./img/icon/capabilities.png);
 }
 
 .heading-btn {
@@ -178,6 +250,19 @@ button:hover {
   width: 100%;
   filter: brightness(90%);
   object-fit: cover;
+  -webkit-transition-property: filter, transform;
+  -moz-transition-property: filter, transform;
+  -o-transition-property: filter, transform;
+  transition-property: filter, transform;
+  transition-property: filter, transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 
 .project figure figcaption {
@@ -214,6 +299,14 @@ button:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-transition-property: transform;
+  -moz-transition-property: transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 .equipment a {
@@ -226,10 +319,12 @@ button:hover {
   margin: 0 auto;
   margin-bottom: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.442);
+  padding: 0;
+  border: none;
+  
 }
 
 .equipment img:hover {
-  filter: brightness(70%);
   transform: scale(1.2);
 }
 
@@ -320,43 +415,39 @@ button:hover {
   background-size: cover;
 }
 
-.feedback a {
-  padding: 3px 0;
-  border-bottom: 1px solid transparent;
-}
-
-.feedback a:hover {
-  border-bottom: 1px solid #f7b70b;
-}
-
-.networks {
-  padding: 20px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.networks li svg {
-  width: 8vw;
-  height: 8vw;
-}
-
-.networks li svg path:hover {
-  stroke: #c79200;
-}
-
 @media all and (min-width: 620px) {
 
   header {
-    padding: 100px 0;
+    padding-bottom: 70px;
   }
 
   .fix-container {
     padding: 0 20px;
   }
+
+/**
+\========== FORM =========/
+*/
+
+  .form-container form {
+    padding: 30px;
+    width: 40vw;
+  }
+  
+  .form-container form input {
+    padding: 10px 15px;
+  }
     
   /**
   \========== HEADER =========/
   */
+
+  .heading-contacts {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
   .heading-text {
     font-size: 3vw;
@@ -371,7 +462,7 @@ button:hover {
   }
   
   .heading-icons_item {
-    padding-left: 6vw;
+    padding-left: 5vw;
     margin: 0 20px 20px 0;
     font-size: 2vw;
   }
@@ -460,12 +551,6 @@ button:hover {
     width: 6vw;
     height: 6vw;
   }
-  
-  
-  .networks li svg {
-    width: 6vw;
-    height: 6vw;
-  }
 }
 
 @media all and (min-width: 860px) {
@@ -525,6 +610,7 @@ button:hover {
 
   .equipment a {
     height: 25vw;
+    max-height: 260px;
   }
   
   .equipment p {
@@ -539,15 +625,12 @@ button:hover {
     font-size: 20px;
   }
 
-  .networks {
-    justify-content: center;
+  .feedback li span {
+    padding-top: calc(4vw + 10px);
   }
-
-  .networks li {
-    margin: 0 30px;
-  }
-
-  .networks li svg {
+  
+  .feedback span::before {
+    left: calc(50% - 2vw);;
     width: 4vw;
     height: 4vw;
   }
@@ -555,6 +638,14 @@ button:hover {
 }
 
 @media all and (min-width: 1000px) {
+
+  .form-container form {
+    width: 25vw;
+  }
+
+  .heading-contacts {
+    font-size: 1.5vw;
+  }
 
   .heading-text {
     font-size: 2.5vw;
